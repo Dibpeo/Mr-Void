@@ -22,7 +22,7 @@ GameData = {
     "MaxAttack": 5,
     "MinAttack": 1,
     "Defense": 3}
-admin_id = 0
+admin_id = 0 # Add your ID here
 
 @client.event
 async def on_ready():
@@ -41,7 +41,7 @@ async def on_message(message):
 # List of commands below
 
     if message.content.startswith("$join"):
-        if message.channel.id == 1369422305192837120:
+        if message.channel.id == 0: # Add the channel's ID here
             filename = os.path.join(folder_path, f"{user_id}.json")
             if os.path.exists(filename):
                 await message.channel.send(f"You have already joined, {user_mention}")
