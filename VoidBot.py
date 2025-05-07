@@ -1,7 +1,7 @@
 import discord
 import json
 
-with json.load("TOKEN.json", "r") as localToken:
+with open("TOKEN.json", "r") as localToken:
     TOKEN = json.load(localToken)
 
 intents = discord.Intents.default()
