@@ -9,7 +9,7 @@ intents.message_content = True
 
 client = discord.Client(intents=intents)
 
-admin_id = 1302049373294821406
+admin_id = 0
 
 @client.event
 async def on_ready():
