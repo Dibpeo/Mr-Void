@@ -11,6 +11,8 @@ os.makedirs(folder_path, exist_ok=True)
 with open("TOKEN.json", "r") as localToken:
     TOKEN = json.load(localToken)
 
+dLink = "" # Add your discord server's invite link. (WARNING! It's best to insert a link that remains active.)
+
 intents = discord.Intents.default()
 intents.message_content = True
 
@@ -50,4 +52,6 @@ async def on_message(message):
                     json.dump(GameData, saveToFile)
                     print("User Data Written")
                 await message.channel.send(f"You have now joined the RPG, {user_mention}")
+    else:
+        await message.channel.send(f"Command Invalid In Selected Channel. Try another channel or join our Discord server: {dLink}")
 client.run(TOKEN)
