@@ -52,6 +52,6 @@ async def on_message(message):
                     json.dump(GameData, saveToFile)
                     print("User Data Written")
                 await message.channel.send(f"You have now joined the RPG, {user_mention}")
-    else:
-        await message.channel.send(f"Command Invalid In Selected Channel. Try another channel or join our Discord server: {dLink}")
+        else:
+            await message.channel.send(f"Command Invalid In Selected Channel. Try another channel or join our Discord server: {dLink}")
 client.run(TOKEN)
